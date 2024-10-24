@@ -58,6 +58,7 @@ function App() {
         setTimeLeft(15);
     };
 
+// HTML (javascript xml)
     return (
         <div>
             <h1>Quiz Game</h1>

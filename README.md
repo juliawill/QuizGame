@@ -1,4 +1,10 @@
 # QuizGame
+This project is full-stack. Therefore, it was divided into front-end (client folder) and back-end (server folder). In the client folder, under client/quiz-game/src, there is the App.css file. The App.css file was written for the styling of the quiz game. There's animations for spin-effects, and this is where the design of the quiz game was written. In this location, there is also the App.js (Javascript) file, where the React package is imported so that multiple states for the quiz flow could be written. This is where the front-end catches data from the backend (using the package axios). There is multiple states in this file, one being gameOver, which indicates whether the quiz has ended. In this file, there is also JavaScript xml code, which creates the structure of the webpage.
+
+In the backend, there is a backend.js file, which uses a Node.js framework (Express) to create an API. It also uses CORS middleware for access from various domains, allowing the front-end to communicate with this backend even if they're on different servers.In this backend.js file, there are GET endpoints, which serves a list of quiz questions in JSON format. 
+
+game.py file which imports the Flask package and creates the Python web framework. 
+
 1. Backend (Node.js with Express and Python Flask)
 Node.js with Express:
 This version uses Express, a Node.js framework, to create a simple API.
@@ -27,6 +33,7 @@ When the game ends, the user is shown their final score and can restart the quiz
 3. Styling (CSS)
 The basic CSS styles ensure the app is centered and responsive, with a simple dark-themed layout.
 There’s a minor animation for a logo spin effect, though it’s not crucial to the quiz functionality.
+
 In summary, this project combines Express or Flask on the backend with a React front end, serving up a quiz app where the user can select answers, view a countdown timer, and see their final score. It’s a straightforward example of creating a full-stack web application that involves fetching and displaying data dynamically while handling user interaction and state.
 
 
