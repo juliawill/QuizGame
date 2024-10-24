@@ -30,9 +30,14 @@ There’s a minor animation for a logo spin effect, though it’s not crucial to
 In summary, this project combines Express or Flask on the backend with a React front end, serving up a quiz app where the user can select answers, view a countdown timer, and see their final score. It’s a straightforward example of creating a full-stack web application that involves fetching and displaying data dynamically while handling user interaction and state.
 
 
-
-
 TO RUN:
+
+- Navigate to Correct Directory: cd server
+- Use Virtual Env: source venv/bin/activate
+- Initialize Node Package Manager (Package Manager for JavaScript): npm init -y (if necessary)
+- Run Script: npm start
+
+Essentially:
 - Activate virtual env
     source venv/bin/activate
 - Launch application with node package manager (npm)
