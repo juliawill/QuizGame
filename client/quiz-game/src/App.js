@@ -65,15 +65,16 @@ function App() {
         setTimeLeft(15);
     };
 
+    
     return (
-        <div>
+        <div className="App-header"> {/* Apply the App-header class here */}
             <h1>Quiz Game</h1>
             {gameOver ? (
                 <div>
                     <h2>Your Score: {score} out of {quizzes.length}</h2>
                     <button onClick={restartGame}>Restart Game</button>
                 </div>
-            ) : (
+         ) : (
                 quizzes.length > 0 && currentQuestionIndex < quizzes.length && (
                     <div>
                         <h2>{quizzes[currentQuestionIndex].question}</h2>
