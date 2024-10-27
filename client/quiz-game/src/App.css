@@ -2,13 +2,8 @@
 
 
 .App {
-  text-align: center; /* Center text alignment*/ }
-
-
-
-.App {
-  background-color: black; /* Test color */ }
-
+  text-align: center; /* Center text alignment*/
+  background-color: black; /* Test color */  }
 
 
 /* Styling for the logo (if used) */
