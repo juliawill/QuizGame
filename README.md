@@ -42,6 +42,8 @@ TO RUN:
 - Navigate to Correct Directory: cd server
 - Use Virtual Env: source venv/bin/activate
 - Initialize Node Package Manager (Package Manager for JavaScript): npm init -y (if necessary)
+- Navigate to Frontend: cd client
+- Run npm install (if necessary)
 - Run Script: npm start
 
 Essentially:
@@ -59,7 +61,7 @@ Essentially:
     run:
     cd server
     npm init -y
-    npm install express cors
+    
 
 2. backend.js
     -Javascript

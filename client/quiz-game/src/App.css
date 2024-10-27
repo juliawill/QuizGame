@@ -1,38 +1,97 @@
+/* Main styling for the App component */
+
+
 .App {
-  text-align: center;
-}
+  text-align: center; /* Center text alignment*/ }
+
+
+
+.App {
+  background-color: black; /* Test color */ }
+
+
+
+/* Styling for the logo (if used) */
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Sets height relative to the viewport size */
+  pointer-events: none; /* Disables mouse events on the logo */
 }
+  
 
+  
+/* Animation for the logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Infinite spinning animation */
   }
 }
 
+
+
+
+/* Header styling for the App */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34; /* Dark background color */
+  min-height: 100vh; /* Minimum height of the viewport */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Align items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white; /* Text color */
 }
 
+/* Link styling (if used) */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Light blue color for links */
 }
 
+/* Keyframes for the logo spinning animation */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Starting rotation */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Ending rotation */
+  }
+}
+
+/* Additional styling for the quiz container */
+.quiz-container {
+  margin: 20px; /* Adds margin around the quiz container */
+  padding: 20px; /* Adds padding inside the container */
+  border: 2px solid #61dafb; /* Light blue border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect for depth */
+}
+
+/* Button styling */
+button {
+  background-color: #61dafb; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  padding: 10px 20px; /* Padding inside buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin: 5px; /* Margin between buttons */
+  font-size: 16px; /* Button text size */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #4da3c4; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Smaller font size on small screens */
+  }
+  
+  button {
+    width: 100%; /* Full width buttons on small screens */
+    font-size: 14px; /* Slightly smaller text size */
   }
 }

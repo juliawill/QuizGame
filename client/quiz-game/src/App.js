@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './App.css';
 
 function App() {
     const [quizzes, setQuizzes] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState([]);
     const [score, setScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(15); // 15 seconds per question
+    const [timeLeft, setTimeLeft] = useState(15);
     const [gameOver, setGameOver] = useState(false);
 
     useEffect(() => {
-        axios.get('http://localhost:5001/api/quizzes')
-            .then(response => {
+        // Fetch quizzes from the backend
+        const fetchQuizzes = async () => {
+            try {
+                const response = await axios.get('http://localhost:5001/api/quizzes');
+                console.log('Fetched quizzes:', response.data); // Debug line
                 setQuizzes(response.data);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error fetching quizzes:', error);
-            });
+            }
+        };
+
+        fetchQuizzes();
     }, []);
 
     useEffect(() => {
+        // Timer logic
         if (timeLeft > 0 && !gameOver) {
             const timerId = setInterval(() => {
-                setTimeLeft(time => time - 1);
+                setTimeLeft(prevTime => prevTime - 1);
             }, 1000);
             return () => clearInterval(timerId);
         } else if (timeLeft === 0) {
@@ -58,7 +65,6 @@ function App() {
         setTimeLeft(15);
     };
 
-// HTML (javascript xml)
     return (
         <div>
             <h1>Quiz Game</h1>
@@ -68,7 +74,7 @@ function App() {
                     <button onClick={restartGame}>Restart Game</button>
                 </div>
             ) : (
-                quizzes.length > 0 && (
+                quizzes.length > 0 && currentQuestionIndex < quizzes.length && (
                     <div>
                         <h2>{quizzes[currentQuestionIndex].question}</h2>
                         <h3>Time Left: {timeLeft}</h3>
@@ -87,4 +93,3 @@ function App() {
 }
 
 export default App;
-

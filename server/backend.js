@@ -1,5 +1,3 @@
-// API 
-
 // import express library for HTTP requests
 const express = require('express');
 // import CORS middleware (access from various domains)
@@ -7,7 +5,7 @@ const cors = require('cors');
 
 // initialize application instance
 const app = express();
-// apply cor middleware to app
+// apply CORS middleware to app
 app.use(cors());
 
 const questions = [
